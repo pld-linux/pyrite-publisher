@@ -8,6 +8,7 @@ License:	BSD-like (see docs)
 Vendor:		Rob Tillotson <rob@pyrite.org>
 Group:		Development/Libraries
 Source0:	http://www.pyrite.org/dist/%{name}-%{version}.tar.gz
+# Source0-md5:	c468ededf9439228ffe9312e2475e50d
 URL:		http://www.pyrite.org/
 BuildRequires:	python-devel
 BuildRequires:	python-modules
