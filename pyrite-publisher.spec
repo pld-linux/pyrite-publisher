@@ -8,6 +8,7 @@ License:	BSD-like (see docs)
 Group:		Development/Libraries
 BuildRequires:	python-devel
 BuildRequires:	python-modules
+Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Vendor:		Rob Tillotson <rob@pyrite.org>
 Url:		http://www.pyrite.org/
