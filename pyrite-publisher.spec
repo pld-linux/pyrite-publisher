@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 Summary:	Content creation tools for Palm users
 Summary(pl):	Program do konwersji tekstu z/do formatów Palm OS
 Name:		pyrite-publisher
