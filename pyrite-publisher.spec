@@ -1,3 +1,4 @@
+%include	/usr/lib/rpm/macros.python
 Summary:	Content creation tools for Palm users
 Summary(pl):	Program do konwersji tekstu z/do formatów Palm OS
 Name:		pyrite-publisher
@@ -36,6 +37,7 @@ env CFLAGS="%{rpmcflags}" python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
 install -D doc/pyrpub.1 $RPM_BUILD_ROOT/%{_mandir}/man1/pyrpub.1
 
@@ -47,7 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog NEWS README.* doc/*.pdb doc/pyrite-publisher/*
 %attr(644,root,root) %doc %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/pyrpub
-%attr(755,root,root) %dir %{_libdir}/python2.2/site-packages/PyritePublisher
-%attr(755,root,root) %{_libdir}/python2.2/site-packages/PyritePublisher/*.so
-%attr(644,root,root) %{_libdir}/python2.2/site-packages/PyritePublisher/*.py
-%attr(644,root,root) %{_libdir}/python2.2/site-packages/PyritePublisher/*.pyc
+%attr(755,root,root) %dir %{py_sitedir}/PyritePublisher
+%attr(755,root,root) %{py_sitedir}/PyritePublisher/*.so
+%{py_sitedir}/PyritePublisher/*.pyc
