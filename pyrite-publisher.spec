@@ -2,7 +2,7 @@
 Summary:	Content creation tools for Palm users
 Summary(pl):	Program do konwersji tekstu z/do formatów Palm OS
 Name:		pyrite-publisher
-Version:	2.1.0
+Version:	2.1.1
 Release:	1
 License:	BSD-like (see docs)
 Vendor:		Rob Tillotson <rob@pyrite.org>
