@@ -4,16 +4,16 @@ Summary(pl):	Program do konwersji tekstu z/do formatów Palm OS
 Name:		pyrite-publisher
 Version:	2.1.0
 Release:	1
-Source0:	http://www.pyrite.org/dist/%{name}-%{version}.tar.gz
 License:	BSD-like (see docs)
+Vendor:		Rob Tillotson <rob@pyrite.org>
 Group:		Development/Libraries
+Source0:	http://www.pyrite.org/dist/%{name}-%{version}.tar.gz
+URL:		http://www.pyrite.org/
 BuildRequires:	python-devel
 BuildRequires:	python-modules
 Requires:	python-modules
 Requires:	python >= 2.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Vendor:		Rob Tillotson <rob@pyrite.org>
-Url:		http://www.pyrite.org/
 
 %define		_noautocompressdoc *.pdb
 
