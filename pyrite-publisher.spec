@@ -9,6 +9,7 @@ Group:		Development/Libraries
 BuildRequires:	python-devel
 BuildRequires:	python-modules
 Requires:	python-modules
+Requires:	python >= 2.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Vendor:		Rob Tillotson <rob@pyrite.org>
 Url:		http://www.pyrite.org/
@@ -41,7 +42,12 @@ install -D doc/pyrpub.1 $RPM_BUILD_ROOT/%{_mandir}/man1/pyrpub.1
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f INSTALLED_FILES
+%files
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS README.* doc/*.pdb doc/pyrite-publisher/*
 %attr(644,root,root) %doc %{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/pyrpub
+%attr(755,root,root) %dir %{_libdir}/python2.2/site-packages/PyritePublisher
+%attr(755,root,root) %{_libdir}/python2.2/site-packages/PyritePublisher/*.so
+%attr(644,root,root) %{_libdir}/python2.2/site-packages/PyritePublisher/*.py
+%attr(644,root,root) %{_libdir}/python2.2/site-packages/PyritePublisher/*.pyc
