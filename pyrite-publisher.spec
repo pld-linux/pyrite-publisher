@@ -40,7 +40,7 @@ env CFLAGS="%{rpmcflags}" python setup.py build
 rm -rf $RPM_BUILD_ROOT
 
 python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
-install -D doc/pyrpub.1 $RPM_BUILD_ROOT/%{_mandir}/man1/pyrpub.1
+install -D doc/pyrpub.1 $RPM_BUILD_ROOT%{_mandir}/man1/pyrpub.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS README.* doc/*.pdb doc/pyrite-publisher/*
 %attr(755,root,root) %{_bindir}/pyrpub
-%attr(755,root,root) %dir %{py_sitedir}/PyritePublisher
+%dir %{py_sitedir}/PyritePublisher
 %attr(755,root,root) %{py_sitedir}/PyritePublisher/*.so
 %{py_sitedir}/PyritePublisher/*.pyc
 %{_mandir}/man1/*
