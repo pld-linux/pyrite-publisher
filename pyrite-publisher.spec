@@ -2,13 +2,17 @@ Summary:	Content creation tools for Palm users
 Summary(pl):	Program do konwersji tekstu z/do formatów Palm OS
 Name:		pyrite-publisher
 Version:	2.1.0
-Release:	0
+Release:	1
 Source0:	http://www.pyrite.org/dist/%{name}-%{version}.tar.gz
 License:	BSD-like (see docs)
 Group:		Development/Libraries
+BuildRequires:	python-devel
+BuildRequires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Vendor:		Rob Tillotson <rob@pyrite.org>
 Url:		http://www.pyrite.org/
+
+%define		_noautocompressdoc *.pdb
 
 %description
 Pyrite Publisher is a content conversion tool for Palm Computing
@@ -31,9 +35,12 @@ env CFLAGS="%{rpmcflags}" python setup.py build
 %install
 rm -rf $RPM_BUILD_ROOT
 python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
+install -D doc/pyrpub.1 $RPM_BUILD_ROOT/%{_mandir}/man1/pyrpub.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files -f INSTALLED_FILES
 %defattr(644,root,root,755)
+%doc ChangeLog NEWS README.* doc/*.pdb doc/pyrite-publisher/*
+%attr(644,root,root) %doc %{_mandir}/man1/*
