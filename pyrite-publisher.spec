@@ -47,8 +47,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS README.* doc/*.pdb doc/pyrite-publisher/*
-%attr(644,root,root) %doc %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/pyrpub
 %attr(755,root,root) %dir %{py_sitedir}/PyritePublisher
 %attr(755,root,root) %{py_sitedir}/PyritePublisher/*.so
 %{py_sitedir}/PyritePublisher/*.pyc
+%{_mandir}/man1/*
