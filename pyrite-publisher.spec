@@ -1,5 +1,5 @@
 Summary:	Content creation tools for Palm users
-Summary(pl):	Program do konwersji tekstu z/do formatów Palm OS
+Summary(pl.UTF-8):   Program do konwersji tekstu z/do formatÃ³w Palm OS
 Name:		pyrite-publisher
 Version:	2.1.1
 Release:	1
@@ -23,11 +23,11 @@ Platform users. Or to put it more simply, Pyrite Publisher takes
 information in a common format like HTML and converts it to something
 you can use on your Palm organizer.
 
-%description -l pl
-Pyrite Publisher jest programem do konwersji tekstów dla u¿ytkowników
-komputerów z Palm OS. Albo, wyra¿aj±c siê pro¶ciej, Pyrite Publisher
-pozwala przekszta³ciæ informacje w zwyk³ym formacie takim jak HTML na
-co¶, co mo¿na czytaæ na organizerach z Palm OS.
+%description -l pl.UTF-8
+Pyrite Publisher jest programem do konwersji tekstÃ³w dla uÅ¼ytkownikÃ³w
+komputerÃ³w z Palm OS. Albo, wyraÅ¼ajÄ…c siÄ™ proÅ›ciej, Pyrite Publisher
+pozwala przeksztaÅ‚ciÄ‡ informacje w zwykÅ‚ym formacie takim jak HTML na
+coÅ›, co moÅ¼na czytaÄ‡ na organizerach z Palm OS.
 
 %prep
 %setup -q
