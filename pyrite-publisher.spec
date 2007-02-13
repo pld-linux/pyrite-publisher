@@ -1,5 +1,5 @@
 Summary:	Content creation tools for Palm users
-Summary(pl.UTF-8):   Program do konwersji tekstu z/do formatów Palm OS
+Summary(pl.UTF-8):	Program do konwersji tekstu z/do formatów Palm OS
 Name:		pyrite-publisher
 Version:	2.1.1
 Release:	1
